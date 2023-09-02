@@ -1,0 +1,16 @@
+Let Str library load a config file implementing the code below with yours values:
+
+// ----------------
+<?php
+
+class _str_values {
+    const DIR = 'rtl';		// Or 'ltr' depends on language writing direction
+
+    const hello = 'مرحبا';
+}
+
+// ----------------
+
+and then, you can get your string value by writting this:
+
+echo str::hello;

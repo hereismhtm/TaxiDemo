@@ -1,0 +1,19 @@
+{
+    # REQUIRED:
+
+    $_notify_config['fcm_server_key']	= '';
+
+
+    # OPTIONAL:
+
+    $_notify_config['fcm_devices_table']	= '';
+    $_notify_config['fcm_user_id_field']	= '';
+    $_notify_config['fcm_user_token_field']	= '';
+}
+
+{
+    # REQUIRED:
+
+    $_notify_config['bulksms_username']	= '';
+    $_notify_config['bulksms_password']	= '';
+}

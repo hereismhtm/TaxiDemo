@@ -1,0 +1,8 @@
+# REQUIRED:
+
+$_db_config['database_name'] 	= 'dbname';
+$_db_config['database_type'] 	= 'mysql';
+$_db_config['server'] 			= 'localhost';
+$_db_config['username'] 		= 'root';
+$_db_config['password'] 		= '';
+$_db_config['charset'] 			= 'utf8';

@@ -1,0 +1,6 @@
+# REQUIRED:
+
+$_tag_config['app_name'] 	= 'MySite';
+$_tag_config['author'] 		= 'Your Name';
+$_tag_config['description'] = 'MySite project';
+$_tag_config['keywords'] 	= 'awesome';

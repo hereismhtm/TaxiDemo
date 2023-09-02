@@ -1,0 +1,27 @@
+# REQUIRED:
+
+$_auth_config['login_table'] 		=	'users';
+
+/*
+ * Can be array like ['username', 'email'].
+ */
+$_auth_config['id_field'] 			=	'username';
+
+/*
+ * Here note that '#' is the default password field value
+ * in login table (no password stored so user can not login).
+ * TYPE: char(99).
+ */
+$_auth_config['pass_field'] 		=	'password';
+
+/*
+ * String value (login table permission field) or a number value.
+ */
+$_auth_config['perm_field'] 		=	1;
+
+$_auth_config['network_token']		=	$_SERVER['REMOTE_ADDR'].'anyRandomStringHere';
+
+
+# OPTIONAL:
+
+$_auth_config['login_page'] 		=	'login';

@@ -1,9 +1,6 @@
 *.code-workspace
 /src/application/config/config.php
 
-/index.php
-/src/system
-
 /res/driversforms/*
 /res/userslogos/*
 !/res/driversforms/index.html
