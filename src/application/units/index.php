@@ -14,7 +14,7 @@ class Index extends Staticy_Unit
     {
         if (isset($args[0])) {
             data::cookie('lang', $args[0]);
-            dirto(cd($args[1] . '/' . $args[2] . '/' . $args[3]));
+            dirto(cd($args[1] . '/' . $args[2] . (isset($args[3]) ?  '/' . $args[3] : '')));
         }
     }
 
