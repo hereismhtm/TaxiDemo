@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+
+  web:
+    container_name: taxidemo-web-container
+    image: hereismhtm/taxidemo:web
+    ports:
+      - 80:80
+    depends_on:
+      - db
+      - backend
+    volumes:
+      - type: bind
+        source: ./res
+        target: /srv/res
+      - driversforms:/srv/res/driversforms:ro
+      - userslogos:/srv/res/userslogos:ro
+
+  backend:
+    container_name: taxidemo-backend-container
+    image: hereismhtm/taxidemo:backend
+    volumes:
+      - driversforms:/var/www/html/res/driversforms:rw
+      - userslogos:/var/www/html/res/userslogos:rw
+
+  db:
+    container_name: taxidemo-db-container
+    image: mysql:8.1.0
+    restart: always
+    volumes:
+      - ./docker/mysql:/docker-entrypoint-initdb.d
+      - mysqldata:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+      MYSQL_DATABASE: taxidemo
+
+volumes:
+  driversforms:
+  userslogos:
+  mysqldata:

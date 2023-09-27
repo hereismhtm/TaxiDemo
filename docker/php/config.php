@@ -6,8 +6,8 @@
  * Useful to show every little problem during development,
  * but only show hard errors in production.
  */
-define('DEV_ENV', true);
-define('DEFAULT_UI_LANG', 'en');
+define('DEV_ENV', false);
+define('DEFAULT_UI_LANG', 'ar');
 
 /**
  * Server name (domain) or IP address.
@@ -24,9 +24,9 @@ $_tag_config['keywords']         = 'taxi';
 
 $_db_config['database_name']     = 'taxidemo';
 $_db_config['database_type']     = 'mysql';
-$_db_config['server']             = 'localhost';
-$_db_config['username']         = '{DatabaseUsernameValue}';
-$_db_config['password']         = '{DatabasePasswordValue}';
+$_db_config['server']             = 'db';
+$_db_config['username']         = 'myuser';
+$_db_config['password']         = 'mypassword';
 $_db_config['charset']             = 'utf8';
 
 $_auth_config['login_page']         =    'cpanel/login';
@@ -34,7 +34,7 @@ $_auth_config['login_table']         =    'system_users';
 $_auth_config['id_field']             =    'Username';
 $_auth_config['pass_field']         =    'Password';
 $_auth_config['perm_field']         =    'Permissions';
-$_auth_config['network_token']        =    $_SERVER['REMOTE_ADDR'] . '[Random Value] ZRj"V%FZLE)Vd5{+Dk9c';
+$_auth_config['network_token']        =    $_SERVER['REMOTE_ADDR'] . '{RandomSecretValue}';
 
 define('NOREPLY_MAIL', 'noreply@taxidemo.pro');
 define('CONTACT_MAIL', 'contact@taxidemo.pro');
